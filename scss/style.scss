@@ -1,0 +1,221 @@
+/*
+** Stylesheet for the SPARC Class Selection Feature
+** 4/20/14
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700);
+
+// SCSS Variables
+
+$blue: #9fbecb;
+$drkblue: #708d9a;
+$white: #e4f3f3;
+$orange: #f7c9a7;
+$green: #d1e7c2;
+/*
+**----------------------------------------------------
+**	GLOBAL ELEMENTES
+**----------------------------------------------------
+*/
+* {
+	margin: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 16px;
+	font-weight: 200;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+p {
+	margin-bottom: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Adelle Basic', 'adelle', serif;
+	font-weight: bold;
+}
+small {
+	display: block;
+}
+
+/*
+**----------------------------------------------------
+**	GLOBAL ELEMENTES
+**----------------------------------------------------
+*/
+
+#Filters {
+	background-color: #ecf0f1;
+}
+
+/*
+**----------------------------------------------------
+**	FORM ELEMENTS
+**----------------------------------------------------
+*/
+input[type="text"],
+input[type="search"],
+input[type="submit"] {
+	border: 1px solid $drkblue;
+	padding: .4em;
+}
+input[value="Go"] {
+	background-color: $drkblue;
+	width: 4em;
+	color: #fff;
+	text-transform: uppercase;
+}
+form {
+	.filter {
+		padding: 1em 0;
+		label {
+			font-weight: bold;
+		}
+	}
+	.filter1 {
+		width: 100%;
+	}
+
+	.filter2 {
+		width: 50%;
+		float: left;
+	}
+}
+#Container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*
+**----------------------------------------------------
+**	COURSE LIST
+**----------------------------------------------------
+*/
+
+#Courses {
+	width: 28%;
+	float: left;
+	margin-right: 2%;
+	h3 {
+		padding: 3% 2% 1% 2%;
+		background-color: $drkblue;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: .08em;
+	}
+	ul {
+	}
+	ul li {
+		border-bottom: 1px solid $drkblue;
+		background-color: lighten($drkblue, 40%);
+		list-style: none;
+		padding: 2% 0;
+		&:last-of-type {
+			border-bottom: none;
+		}
+		&:before {
+		}
+		.subclasses li {
+			background-color: #fff;
+		}
+	}
+}
+#CourseShortcut {
+	display: none;
+}
+
+#Return {
+	display: none;
+}
+/*
+**----------------------------------------------------
+**	LIST OF CLASSES
+**----------------------------------------------------
+*/
+#Classes {
+	width: 70%;
+	float: right;
+	section:nth-of-type(even) {
+		padding: 3%;
+		background-color: $white;
+		.more {
+			background-color: $drkblue;
+			padding: 2%;
+			display: block;
+			width: 25%;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			&:hover {
+				background-color: saturate($orange, 40%);
+			}
+		}
+	}
+	section:nth-of-type(odd) {
+		background-color: lighten($green, 12%);
+		padding: 3%;
+		.more {
+			background-color: darken($green, 20%);
+			padding: 2%;
+			display: block;
+			width: 25%;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			&:hover {
+				background-color: saturate($orange, 40%);
+			}
+		}
+	}
+}
+.subclasses {
+	display: none;
+}
+
+.reveal {
+	display: normal;
+}
+@media screen and (max-width: 1024px) {
+	#Container {
+		width: 100%;
+		padding: 1em;
+	}
+
+}
+@media screen and (max-width:480px) {
+	body {
+		font-size: 20px;
+	}
+	#CourseShortcut {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		border: 1px solid $blue;
+		background-color: #525151;
+		color: #fff;
+	}
+	#Return {
+		display: block;
+	}
+	#Container,
+	#Courses,
+	#Classes {
+		width: 100%;
+	}
+	#Courses {
+		h3{
+			text-align: center;
+		}
+	}
+	#Classes {
+		margin-top: .5em;
+		section {
+			margin-top: .2em;
+			.more {
+				width: 50%;
+			}
+		}
+	}
+
+}
