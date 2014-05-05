@@ -1,0 +1,63 @@
+body{
+	background-color: #CCC;
+	color: #222;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+a{
+	color: #444;
+	text-decoration: none;
+}
+#logo{
+	background: #333;
+	color: #FFF;
+	height: 100px;
+	width: 100px;
+	float:left; 
+}
+#home-links{
+	float:left;	
+}
+#home-links h1{
+	margin: 10px;
+}
+#home-links h2{
+	margin: 10px;
+}
+#search-mod{
+	float: right;
+}
+#reg-log{
+	font-size: 14px;
+	padding: 10px;
+}
+#top-nav{
+	clear: both;
+	padding: 10px 0;
+}
+.full-width-module{
+	background: #666;
+	color: #FFF;
+	height: 400px;
+	width: 100%;
+	margin: 20px 0;
+	padding: 20px;
+}
+#bottom-nav{
+	padding: 10px 0;
+}
+ul.nav{
+	margin: 0;
+	padding: 0;
+}
+ul.nav li{
+	list-style: none;
+	display: inline;
+	margin: 5px;
+}
+#copyright{
+	float: left;
+}
+#privacy{
+	float: right;
+}
