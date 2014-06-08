@@ -5,7 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700);
 /*
 **----------------------------------------------------
-**	GLOBAL ELEMENTES
+**	GLOBAL ELEMENTES, TYPOGRAPHY, & CONTAINERS
 **----------------------------------------------------
 */
 * {
@@ -17,7 +17,14 @@
 body {
   font-size: 16px;
   font-weight: 200;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #e1ebef; }
+
+a {
+  text-decoration: none;
+  color: #708d9a; }
+  a:hover {
+    color: #92460d; }
 
 p {
   margin-bottom: 1em; }
@@ -29,13 +36,23 @@ h1, h2, h3, h4, h5, h6 {
 small {
   display: block; }
 
-/*
-**----------------------------------------------------
-**	GLOBAL ELEMENTES
-**----------------------------------------------------
-*/
-#Filters {
-  background-color: #ecf0f1; }
+#Container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 960px;
+  background-color: #fff;
+  overflow: auto;
+  padding: 0 10px;
+  border-left: 1px solid #8eb3c2;
+  border-right: 1px solid #8eb3c2;
+  border-bottom: 1px solid #8eb3c2; }
+
+.page-title {
+  border-bottom: 3px solid #f7c9a7;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  color: #c15c11; }
 
 /*
 **----------------------------------------------------
@@ -44,7 +61,8 @@ small {
 */
 input[type="text"],
 input[type="search"],
-input[type="submit"] {
+input[type="submit"],
+input[type="password"] {
   border: 1px solid #708d9a;
   padding: .4em; }
 
@@ -64,9 +82,236 @@ form .filter2 {
   width: 50%;
   float: left; }
 
-#Container {
-  width: 80%;
-  margin: 0 auto; }
+form[action="submit"] {
+  clear: both;
+  overflow: auto;
+  background-color: #d1e7c2;
+  border: 1px solid #9aca79;
+  padding: 10px;
+  font-weight: 700; }
+  form[action="submit"] h3 {
+    padding: 10px 0;
+    border-bottom: 2px solid #4e7a30;
+    color: #4e7a30;
+    margin-bottom: 20px; }
+  form[action="submit"] input[type="text"] {
+    margin-bottom: 10px; }
+  form[action="submit"] input[type="select"] {
+    margin-bottom: 10px; }
+  form[action="submit"] input[type="submit"] {
+    background-color: #9fbecb;
+    width: 100%;
+    font-size: 1.6em;
+    margin-top: 20px;
+    color: #2f3c42; }
+    form[action="submit"] input[type="submit"]:hover {
+      background-color: #c0d4dd; }
+
+.cardinfo {
+  width: 49%;
+  background-color: #edf5e7;
+  padding: 20px;
+  float: left;
+  border: 1px solid #9aca79; }
+  .cardinfo:first-of-type {
+    margin-right: 2%; }
+  .cardinfo label {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #4e7a30; }
+  .cardinfo input[type="radio"] {
+    margin-right: 10px; }
+
+/*
+**----------------------------------------------------
+**	HEADER
+**----------------------------------------------------
+*/
+header {
+  padding: 2% 0;
+  overflow: auto; }
+  header .row {
+    border-bottom: 1px solid ligten(#9fbecb, 20%);
+    height: 50px; }
+    header .row a {
+      padding-right: 4%;
+      display: inline-block;
+      float: left; }
+    header .row .search {
+      display: inline-block;
+      width: 25%;
+      float: right; }
+      header .row .search input[type="text"] {
+        width: 80%;
+        display: inline; }
+      header .row .search input[type="submit"] {
+        width: 18%;
+        display: inline; }
+  header .header-row {
+    clear: both;
+    margin-bottom: 20px;
+    height: 140px; }
+  header #Branding {
+    clear: both;
+    position: relative;
+    margin-right: 1%;
+    width: 39%;
+    float: left;
+    height: 140px;
+    background-color: #e1ebef;
+    border: 1px solid #9fbecb; }
+    header #Branding img {
+      position: absolute;
+      bottom: 0;
+      right: 10px; }
+    header #Branding h1 {
+      font-size: 2em;
+      padding: 0 2%;
+      z-index: 10;
+      display: block;
+      float: left;
+      color: #385966;
+      position: relative;
+      z-index: 1; }
+  header #Login {
+    width: 60%;
+    float: left;
+    background-color: #edf5e7;
+    overflow: hidden;
+    border: 1px solid #659f3e;
+    height: 140px;
+    padding: 2%;
+    position: relative; }
+    header #Login input[value="Log Out"] {
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+    header #Login .account-button {
+      display: inline-block;
+      width: 22%;
+      text-align: center;
+      color: #659f3e;
+      border: 1px solid #659f3e;
+      height: 75px;
+      padding-top: 5px; }
+      header #Login .account-button small {
+        font-size: .8em; }
+      header #Login .account-button:hover {
+        background-color: #fafdf9; }
+    header #Login h3 {
+      color: #4e7a30;
+      padding-bottom: 10px; }
+    header #Login input {
+      font-size: .8em; }
+    header #Login input[type="submit"] {
+      background-color: #d1e7c2;
+      border: 1px solid #659f3e; }
+    header #Login small {
+      font-size: 1em;
+      margin-top: 13px; }
+      header #Login small a {
+        color: #4e7a30;
+        text-decoration: underline; }
+        header #Login small a:hover {
+          color: #ef9049; }
+  header nav {
+    clear: both;
+    border-top: 1px solid #708d9a;
+    border-bottom: 1px solid #708d9a;
+    padding: 10px 0;
+    width: 100%;
+    display: block; }
+    header nav a {
+      margin-right: 2%; }
+
+/*
+**----------------------------------------------------
+**	LIST OF CLASSES
+**----------------------------------------------------
+*/
+.class-category {
+  border: 1px solid #708d9a;
+  background-color: #f2f6f8;
+  height: 200px;
+  width: 32%;
+  margin-bottom: 30px;
+  margin-right: 2%;
+  float: left;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  overflow: hidden;
+  position: relative; }
+  .class-category:hover {
+    background-color: #d1e7c2;
+    border: 1px solid #375522;
+    color: #375522; }
+    .class-category:hover img {
+      border-top: 1px solid #375522; }
+  .class-category:nth-of-type(3n+0) {
+    margin-right: 0; }
+  .class-category p {
+    padding: 10px 0 0 10px; }
+  .class-category img {
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    border-top: 1px solid #708d9a; }
+
+/*
+**----------------------------------------------------
+**	FOOTER
+**----------------------------------------------------
+*/
+footer {
+  clear: both;
+  padding-bottom: 30px; }
+  footer .row {
+    padding-top: 10px;
+    width: 100%;
+    clear: both;
+    border-top: 1px solid #e1ebef; }
+    footer .row small {
+      display: inline-block; }
+    footer .row a {
+      display: inline-block;
+      float: right;
+      padding-left: 2%;
+      padding-bottom: 5px; }
+    footer .row .footer-column {
+      width: 25%;
+      float: left; }
+      footer .row .footer-column a {
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: left; }
+
+/*
+**----------------------------------------------------
+**	CLASSES
+**----------------------------------------------------
+*/
+.search-catalog {
+  width: 100%;
+  background-color: #fbe6d6;
+  border: #f7c9a7;
+  height: 120px;
+  overflow: auto;
+  padding: 2%;
+  border: 1px solid #f7c9a7;
+  margin-bottom: 20px;
+  color: #c15c11; }
+  .search-catalog h3 {
+    margin-bottom: 10px; }
+  .search-catalog input[type="text"] {
+    border: 1px solid #f7c9a7;
+    width: 50%; }
+  .search-catalog input[value="Search Course Catalog"] {
+    border: 1px solid #c15c11;
+    background-color: #ef9049;
+    color: #7a3a0b;
+    padding-left: 2em;
+    padding-right: 2em; }
 
 /*
 **----------------------------------------------------
@@ -76,23 +321,29 @@ form .filter2 {
 #Courses {
   width: 28%;
   float: left;
-  margin-right: 2%; }
-  #Courses h3 {
-    padding: 3% 2% 1% 2%;
-    background-color: #708d9a;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .08em; }
-  #Courses ul li {
-    border-bottom: 1px solid #708d9a;
-    background-color: #e8ecee;
-    list-style: none;
-    padding: 2% 0; }
-    #Courses ul li:last-of-type {
-      border-bottom: none; }
-    #Courses ul li .subclasses li {
-      background-color: #fff; }
+  margin-right: 2%;
+  border: 1px solid #1a2124; }
+
+#Courses h3 {
+  padding: 3% 2% 1% 2%;
+  background-color: #708d9a;
+  color: #1a2124;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid #1a2124; }
+
+#Courses ul li {
+  border-bottom: 1px solid #708d9a;
+  background-color: #e8ecee;
+  list-style: none;
+  padding: 2% 0 2% 10px; }
+
+#Courses ul li:last-of-type {
+  border-bottom: none; }
+
+#Courses ul li .subclasses li {
+  background-color: #fff; }
 
 #CourseShortcut {
   display: none; }
@@ -100,7 +351,7 @@ form .filter2 {
 #Return {
   display: none; }
 
-/*
+ /*
 **----------------------------------------------------
 **	LIST OF CLASSES
 **----------------------------------------------------
@@ -108,35 +359,51 @@ form .filter2 {
 #Classes {
   width: 70%;
   float: right; }
-  #Classes section:nth-of-type(even) {
-    padding: 3%;
-    background-color: #e4f3f3; }
-    #Classes section:nth-of-type(even) .more {
-      background-color: #708d9a;
-      padding: 2%;
-      display: block;
-      width: 25%;
-      text-align: center;
-      color: #fff;
-      text-decoration: none; }
-      #Classes section:nth-of-type(even) .more:hover {
-        background-color: #ffc89f; }
-  #Classes section:nth-of-type(odd) {
-    background-color: #f2f8ee;
-    padding: 3%; }
-    #Classes section:nth-of-type(odd) .more {
-      background-color: #9aca79;
-      padding: 2%;
-      display: block;
-      width: 25%;
-      text-align: center;
-      color: #fff;
-      text-decoration: none; }
-      #Classes section:nth-of-type(odd) .more:hover {
-        background-color: #ffc89f; }
 
-.subclasses {
-  display: none; }
+#Classes p {
+  margin-top: 1em; }
+
+#Classes section:nth-of-type(even) {
+  padding: 3%;
+  margin-bottom: 10px;
+  background-color: #e4f3f3;
+  border: 1px solid #708d9a;
+  color: #445760; }
+
+#Classes section:nth-of-type(even) .more {
+  background-color: #708d9a;
+  padding: 2%;
+  display: block;
+  width: 25%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #708d9a; }
+
+#Classes section:nth-of-type(even) .more:hover {
+  background-color: #ffc89f;
+  border: 1px solid #ef9049; }
+
+#Classes section:nth-of-type(odd) {
+  background-color: #f2f8ee;
+  border: 1px solid #7ebc54;
+  color: #375522;
+  padding: 3%;
+  margin-bottom: 10px; }
+
+#Classes section:nth-of-type(odd) .more {
+  background-color: #9aca79;
+  padding: 2%;
+  display: block;
+  width: 25%;
+  text-align: center;
+  border: 1px solid #7ebc54;
+  color: #fff;
+  text-decoration: none; }
+
+#Classes section:nth-of-type(odd) .more:hover {
+  background-color: #ffc89f;
+  border: 1px solid #ef9049; }
 
 .reveal {
   display: normal; }
@@ -144,8 +411,17 @@ form .filter2 {
 @media screen and (max-width: 1024px) {
   #Container {
     width: 100%;
-    padding: 1em; } }
+    padding: 1em; }
+
+  #Instructions img {
+    left: 36%; }
+
+  #Instructions h3 {
+    margin-top: 3em; } }
 @media screen and (max-width: 480px) {
+  #Instructions img {
+    left: 30%; }
+
   body {
     font-size: 20px; }
 
@@ -170,7 +446,206 @@ form .filter2 {
 
   #Classes {
     margin-top: .5em; }
-    #Classes section {
-      margin-top: .2em; }
-      #Classes section .more {
-        width: 50%; } }
+
+  #Classes section {
+    margin-top: .2em; }
+
+  #Classes section .more {
+    width: 50%; } }
+/*
+**----------------------------------------------------
+**	LIST OF CLASSES
+**----------------------------------------------------
+*/
+.info img {
+  width: 35%;
+  float: left;
+  margin-right: 1%;
+  border: 1px solid #a9c5d0; }
+.info small {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #a9c5d0;
+  padding-bottom: 10px; }
+.info .text {
+  width: 64%;
+  float: left; }
+
+/*
+**----------------------------------------------------
+**	REGISTER FORM
+**----------------------------------------------------
+*/
+.form-total {
+  border: 1px solid #9fbecb; }
+
+.form-name,
+.form-gender,
+.form-birthday,
+.form-login-info {
+  background-color: #f2f6f8;
+  padding: 10px 0 0 20px; }
+  .form-name input[type="text"],
+  .form-gender input[type="text"],
+  .form-birthday input[type="text"],
+  .form-login-info input[type="text"] {
+    margin-bottom: 5px; }
+  .form-name h4,
+  .form-gender h4,
+  .form-birthday h4,
+  .form-login-info h4 {
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #9fbecb;
+    color: #5d91a7; }
+
+input[type="radio"] {
+  margin-left: 10px;
+  padding-right: 5px; }
+
+.additional-member {
+  background-color: #edf5e7;
+  border: 1px solid #d1e7c2;
+  padding: 10px 0 10px 20px;
+  margin-bottom: 20px; }
+  .additional-member input[type="text"] {
+    margin-bottom: 5px;
+    border: 1px solid #d1e7c2; }
+
+.add-family {
+  padding: 20px 0 10px 0;
+  color: #659f3e;
+  border-bottom: 3px solid #d1e7c2;
+  margin-bottom: 20px; }
+
+.create-account {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1.4em;
+  background-color: #f7c9a7;
+  color: #92460d;
+  border: 1px solid #92460d !important; }
+  .create-account:hover {
+    background-color: #708d9a;
+    color: white;
+    border: 1px black !important; }
+
+/*
+**----------------------------------------------------
+**	HOMEPAGE
+**----------------------------------------------------
+*/
+.homepage-hero {
+  height: 470px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+  background-image: url(../img/hero_ace.jpg);
+  background-size: 100%;
+  padding: 200px 0 0 20px; }
+  .homepage-hero h2 {
+    font-size: 2em; }
+  .homepage-hero p {
+    padding-bottom: 20px;
+    font-size: 1.6em; }
+  .homepage-hero a {
+    text-shadow: none;
+    background-color: #e4f3f3;
+    border: 1px solid #57b4b4;
+    font-size: 1.2em;
+    padding: 20px;
+    color: #57b4b4;
+    margin-top: 20px; }
+    .homepage-hero a:hover {
+      color: #c15c11;
+      border: 1px solid #c15c11;
+      background-color: white; }
+
+.homepage-calendar {
+  width: 33%;
+  float: left;
+  overflow: visible; }
+  .homepage-calendar img {
+    width: 99%; }
+
+.homepage-heading {
+  margin: 20px 0 10px 0;
+  border-top: 1px solid #9fbecb;
+  border-bottom: 1px solid #9fbecb;
+  padding: 10px 0 5px 0;
+  color: #5d91a7; }
+
+.homepage-module {
+  width: 65%;
+  float: left;
+  margin-left: 2%;
+  background-color: #f2f6f8;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: .95em; }
+  .homepage-module h4 {
+    color: #92460d; }
+  .homepage-module ul {
+    list-style: none; }
+  .homepage-module a {
+    color: #497588; }
+    .homepage-module a:hover {
+      color: #c15c11;
+      text-decoration: underline; }
+
+/*
+**----------------------------------------------------
+**	RESPONSIVE
+**----------------------------------------------------
+*/
+@media screen and (max-width: 890px) {
+  .homepage-hero {
+    background-size: 1000px; }
+
+  header #Branding,
+  header #Login {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1em; }
+
+  header #Login input[type="submit"] {
+    width: 100%;
+    display: block;
+    height: auto;
+    position: static; }
+
+  header #Branding h1 {
+    font-size: 1.2em; }
+
+  header #Login h3 {
+    font-size: 1em; }
+
+  header nav {
+    margin-top: 10px; }
+
+  .homepage-hero,
+  .homepage-module,
+  .homepage-calendar {
+    width: 100%;
+    margin: 0 auto; }
+
+  header #Login {
+    height: auto; }
+
+  header #Login .account-button {
+    clear: both;
+    width: 100%;
+    height: auto; }
+
+  header .row .search {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+
+  footer .row a {
+    width: 100%; }
+
+  .info img,
+  .info .text,
+  .cardinfo {
+    width: 100%; } }

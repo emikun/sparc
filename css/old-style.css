@@ -1,0 +1,277 @@
+/*
+** Stylesheet for the SPARC Class Selection Feature
+** 4/20/14
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700);
+/*
+**----------------------------------------------------
+**	GLOBAL ELEMENTES
+**----------------------------------------------------
+*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #9fbecb; }
+
+p {
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Adelle Basic', 'adelle', serif;
+  font-weight: bold; }
+
+small {
+  display: block; }
+
+/*
+**----------------------------------------------------
+**	BIGGIE ELEMENTES
+**----------------------------------------------------
+*/
+#Filters {
+  background-color: #ecf0f1; }
+
+#Instructions {
+  margin-top: 3em;
+  background-color: #8ea5af;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  color: white;
+  padding: 4%;
+  font-size: .8em;
+  clear: both;
+  position: relative; }
+  #Instructions img {
+    position: absolute;
+    width: 140px;
+    top: -71px;
+    left: 1em; }
+  #Instructions h3 {
+    letter-spacing: .06em;
+    text-align: center;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-top: 1.6em; }
+  #Instructions ol {
+    margin-left: 3.6%; }
+
+.Search {
+  width: 100%;
+  background-color: #c0d4dd;
+  padding: 2%;
+  clear: both;
+  border-radius-bottom-right: 6px;
+  border-radius-bottom-left: 6px;
+  overflow: auto; }
+  .Search form {
+    float: right; }
+
+/*
+**----------------------------------------------------
+**	GLOBAL ELEMENTES
+**----------------------------------------------------
+*/
+header {
+  padding: 2% 0;
+  overflow: auto; }
+  header hgroup {
+    width: 80%;
+    float: left; }
+    header hgroup img, header hgroup h2 {
+      float: left; }
+    header hgroup img {
+      width: 120px; }
+    header hgroup h2 {
+      position: relative;
+      top: .6em;
+      padding-left: 2%;
+      color: #445760; }
+
+/*
+**----------------------------------------------------
+**	FORM ELEMENTS
+**----------------------------------------------------
+*/
+input[type="text"],
+input[type="search"],
+input[type="submit"] {
+  border: 1px solid #708d9a;
+  padding: .4em; }
+
+input[value="Go"] {
+  background-color: #708d9a;
+  width: 4em;
+  color: #fff;
+  text-transform: uppercase; }
+
+form .filter {
+  padding: 1em 0; }
+  form .filter label {
+    font-weight: bold; }
+form .filter1 {
+  width: 100%; }
+form .filter2 {
+  width: 50%;
+  float: left; }
+
+#Container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 960px;
+  background-color: #fff;
+  overflow: auto;
+  padding: 0 10px; }
+
+/*
+**----------------------------------------------------
+**	COURSE LIST
+**----------------------------------------------------
+*/
+#Courses {
+  width: 28%;
+  float: left;
+  margin-right: 2%; }
+  #Courses h3 {
+    padding: 3% 2% 1% 2%;
+    background-color: #708d9a;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px; }
+  #Courses ul li {
+    border-bottom: 1px solid #708d9a;
+    background-color: #e8ecee;
+    list-style: none;
+    padding: 2% 0; }
+    #Courses ul li:last-of-type {
+      border-bottom: none; }
+    #Courses ul li .subclasses li {
+      background-color: #fff; }
+
+#CourseShortcut {
+  display: none; }
+
+#Return {
+  display: none; }
+
+/*
+**----------------------------------------------------
+**	LIST OF CLASSES
+**----------------------------------------------------
+*/
+#Classes {
+  width: 70%;
+  float: right; }
+  #Classes p {
+    margin-top: 1em; }
+  #Classes section:nth-of-type(even) {
+    padding: 3%;
+    background-color: #e4f3f3; }
+    #Classes section:nth-of-type(even) .more {
+      background-color: #708d9a;
+      padding: 2%;
+      display: block;
+      width: 25%;
+      text-align: center;
+      color: #fff;
+      text-decoration: none; }
+      #Classes section:nth-of-type(even) .more:hover {
+        background-color: #ffc89f; }
+  #Classes section:nth-of-type(odd) {
+    background-color: #f2f8ee;
+    padding: 3%; }
+    #Classes section:nth-of-type(odd) .more {
+      background-color: #9aca79;
+      padding: 2%;
+      display: block;
+      width: 25%;
+      text-align: center;
+      color: #fff;
+      text-decoration: none; }
+      #Classes section:nth-of-type(odd) .more:hover {
+        background-color: #ffc89f; }
+
+.subclasses {
+  display: none; }
+
+.reveal {
+  display: normal; }
+
+@media screen and (max-width: 1024px) {
+  #Container {
+    width: 100%;
+    padding: 1em; }
+
+  #Instructions img {
+    left: 36%; }
+  #Instructions h3 {
+    margin-top: 3em; } }
+@media screen and (max-width: 480px) {
+  #Instructions img {
+    left: 30%; }
+
+  body {
+    font-size: 20px; }
+
+  #CourseShortcut {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #9fbecb;
+    background-color: #525151;
+    color: #fff; }
+
+  #Return {
+    display: block; }
+
+  #Container,
+  #Courses,
+  #Classes {
+    width: 100%; }
+
+  #Courses h3 {
+    text-align: center; }
+
+  #Classes {
+    margin-top: .5em; }
+    #Classes section {
+      margin-top: .2em; }
+      #Classes section .more {
+        width: 50%; } }
+/*
+**----------------------------------------------------
+**	LIST OF CLASSES
+**----------------------------------------------------
+*/
+.class-category {
+  outline: 1px solid black;
+  height: 200px;
+  width: 25%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  float: left; }
+  .class-category p {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.2em; }
+  .class-category:nth-of-type(2) {
+    margin-right: 0; }
+
+/*
+**----------------------------------------------------
+**	FOOTER
+**----------------------------------------------------
+*/
+footer {
+  clear: both; }

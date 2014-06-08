@@ -14,7 +14,6 @@
 	<script type="text/javascript" src="//use.typekit.net/smi0dan.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body>
 <div id="Container">
 <header>
 	<div class="row">
@@ -36,11 +35,28 @@
 		</div>
 		</a>
 		<div id="Login">
-			<h3>Sign Up For Activities, Classes, &amp; Events</h3>
-			<input type="text" placeholder="Email address">
-			<input type="password" placeholder="Password">
-			<input type="submit" value="Login to ACE Account">
-			<small><a href="register.html">I don't have an ACE Account!</a></small>
+			<h3>My ACE Account</h3>
+			<input type="submit" value="Log Out">
+			<!--Button-->
+			<a href="#" class="account-button">
+					<i class="fa fa-user fa-2x"></i>
+					<small>Profiles</small>
+			</a>
+			<!--Button-->
+			<a href="#" class="account-button">
+					<i class="fa fa-gears fa-2x"></i>
+					<small>Account Settings</small>
+			</a>
+			<!--Button-->
+			<a href="#" class="account-button">
+					<i class="fa fa-calendar-o fa-2x"></i>
+					<small>My Schedule</small>
+			</a>
+			<!--Button-->
+			<a href="#" class="account-button">
+					<i class="fa fa-bookmark fa-2x"></i>
+					<small>Favorite Classes</small>
+			</a>
 		</div>
 	</div>
 	<nav>
@@ -51,31 +67,50 @@
 		<a href="#">Contact</a>
 	</nav>
 </header>
+<body>
 
 
-<div class="homepage-hero">
-<h2>Sign up for activities, classes, &amp; events</h2>
-<p>The Seattle Department of Parks &amp; Recreation offers hundreds of classes and events!</p>
-<a href="findaclass.html">Check out our current offerings</a>
+<h2 class="page-title">
+	<a href="findaclass.html">Find A Class &raquo;</a>
+	<a href="performingarts.html">Performing Arts &amp; Dance &raquo;</a>
+	Pre-Ballet (4&mdash;5 years)</h2>
+	<div class="info">
+		<img src="img/perf-arts.jpg" alt="">
+		<div class="text">
+			<small>Magnolia Community Center (Fireside Room)<br>
+			April 2, 2014 &mdash; June 4, 2014<br>
+			Wednesdays 3:45pm &mdash; 4:30pm (10 days)</small>
+			<strong>Course Number: 114840</strong><br>
+			<strong style="margin-bottom: 20px;">Cost: $120</strong>
+			<p>Courses that teach the basics of correct body alignment and proper ballet critique in a creative, fun environment. Join our instructor, Charla Jennings, during her carefully crafted lessons that will enhance body and spatial awareness, basic movements, and creative impressions. Ballet tights and shoes are required for all pre-ballet and ballet classes.</p>
+		</div>
+	</div>
+		<div>
+	<form action="submit">
+		<h3>Register for Pre-Ballet (4&mdash;5 years)</h3>
+		<label for="attendee">Attendee:  </label>
+		<select name="attendee" id="attendee">
+			<option value="me">Me</option>
+			<option value="other"> Profile 2</option>
+			<option value="other2">Profile 3</option>
+		</select><br>
+		<label for="creditcard">Payment Information</label><br>
+		<div class="cardinfo">
+			<label for="card">Use an Existing Card</label> <br>
+			<input type="radio" value="card1" name="card">Visa ending in 3213 <br>
+			<input type="radio" value="card1" name="card">MasterCard ending in 7842 <br>
+		</div>
+		<div class="cardinfo">
+			<input type="radio" value="card1" name="card">
+			<label for="">Add a New Card</label><br>
+			<input type="text" name="creditcard" placeholder="Card number"><br>
+			<input type="text" name="expiry" placeholder="MM/YY"><br>
+			<input type="text" name="cvc" placeholder="CVC"><br>
+		</div>
+		<input type="submit" value="Register for Class">
+	</form>
 </div>
-<h3 class="homepage-heading">Events Calendar &amp; Upcoming Acitivites</h3>
-<div class="homepage-calendar">
-	<img src="img/Calendar.png" alt="Calendar">
-</div>
-<div class="homepage-module">
-	<h4>Upcoming Events</h4>
-	<strong>Monday, June 9, 2014</strong>
-	<ul>
-		<li>8:30am&mdash;12:30pm <a href="#">Breakin the Back of Blackberries</a></li>
-		<li>9:30am&mdash;12:30pm <a href="#">Toddler Open Gym</a></li>
-		<li>10am&mdash;3pm <a href="#">Drop-In Basketball</a></li>
-		<li>10am&mdash;8:45pm <a href="#">Drop-In Table Tennis</a></li>
-		<li>10am&mdash;8pm <a href="#">Toddler Play Room</a></li>
-		<li>3&mdash;4pm <a href="#">Drop-In Basketball</a></li>
-		<li>6:30pm&mdash;8:30pm <a href="#">Jr. League Roller Derby Practices</a></li>
-		<li>7&mdash;8:45pmpm <a href="#">Drop In Dodgeball</a></li>
-	</ul>
-</div>
+
 <!-- Footer -->
 <footer>
 	<div class="row">

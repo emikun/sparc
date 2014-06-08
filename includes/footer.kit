@@ -1,0 +1,58 @@
+<!-- Footer -->
+<footer>
+	<div class="row">
+		<div class="footer-column">
+			<a href="#">Seattle.gov Home</a>
+		</div>
+		<div class="footer-column">
+			<a href="#">Living in Seattle</a>
+			<a href="#">Visiting Seattle</a>
+			<a href="#">Business in Seattle</a>
+		</div>
+		<div class="footer-column">
+			<a href="#">City Services</a>
+			<a href="#">City Departments</a>
+		</div>
+		<div class="footer-column">
+			<a href="#">Mayor's Office</a>
+			<a href="#">City Council</a>
+		</div>
+	</div>
+	<div class="row">
+		<small>&copy; City of Seattle 1995-2014</small>
+		<a href="#">Volunteer</a>
+		<a href="#">Donate</a>
+		<a href="#">FAQ</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+		<a href="#">Jobs</a>
+		<a href="#">Privacy &amp; Security Policy</a>
+	</div>
+</footer>
+</div><!--end #Container-->
+<script>
+		$(document).ready(
+			$('#Courses ul li').not("#Courses ul li ul li").click(function(e) {
+				$('#Courses ul li ul').hide();
+				$(this).children('ul').toggle();
+				e.stopPropogation();
+			})
+		);
+
+		$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+</body>
+</html>

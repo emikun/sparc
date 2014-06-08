@@ -1,0 +1,25 @@
+<div>
+	<form action="submit">
+		<h3>Register for Pre-Ballet (4&mdash;5 years)</h3>
+		<label for="attendee">Attendee:  </label>
+		<select name="attendee" id="attendee">
+			<option value="me">Me</option>
+			<option value="other"> Profile 2</option>
+			<option value="other2">Profile 3</option>
+		</select><br>
+		<label for="creditcard">Payment Information</label><br>
+		<div class="cardinfo">
+			<label for="card">Use an Existing Card</label> <br>
+			<input type="radio" value="card1" name="card">Visa ending in 3213 <br>
+			<input type="radio" value="card1" name="card">MasterCard ending in 7842 <br>
+		</div>
+		<div class="cardinfo">
+			<input type="radio" value="card1" name="card">
+			<label for="">Add a New Card</label><br>
+			<input type="text" name="creditcard" placeholder="Card number"><br>
+			<input type="text" name="expiry" placeholder="MM/YY"><br>
+			<input type="text" name="cvc" placeholder="CVC"><br>
+		</div>
+		<input type="submit" value="Register for Class">
+	</form>
+</div>
